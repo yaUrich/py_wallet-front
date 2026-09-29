@@ -13,6 +13,8 @@ All notable changes to the **py_wallet-front** application are documented here.
 
 ### Changed
 
+- Add direct regression coverage for portfolio-history timestamp aggregation,
+  daily seed selection, and carry-forward gaps.
 - Add an optional 24-hour portfolio alert threshold to Telegram digest settings.
 - Explain ticker-based live pricing for manual crypto and fiat balances, while
   keeping an entered USD price as an explicit override.

@@ -13,6 +13,8 @@ All notable changes to the **py_wallet-front** application are documented here.
 
 ### Changed
 
+- Normalize malformed and non-finite numeric values to zero in UI formatters,
+  with direct regression coverage for money and address helpers.
 - Add direct regression coverage for portfolio-history timestamp aggregation,
   daily seed selection, and carry-forward gaps.
 - Add an optional 24-hour portfolio alert threshold to Telegram digest settings.

@@ -3,7 +3,7 @@ import BigNumber from "bignumber.js";
 function finiteAmount(value?: string | number | null) {
   try {
     const amount = new BigNumber(value ?? 0);
-    return amount.isFinite() ? amount : null;
+    return amount.isFinite() && Number.isFinite(amount.toNumber()) ? amount : null;
   } catch {
     return null;
   }

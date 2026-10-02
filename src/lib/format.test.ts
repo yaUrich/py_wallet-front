@@ -8,6 +8,7 @@ describe("formatUsd", () => {
     expect(formatUsd("NaN")).toBe("$0.00");
     expect(formatUsd("not-a-number")).toBe("$0.00");
     expect(formatUsd(Number.POSITIVE_INFINITY)).toBe("$0.00");
+    expect(formatUsd("1e1000")).toBe("$0.00");
   });
 
   it("keeps cents below one thousand and rounds larger totals", () => {
@@ -23,6 +24,7 @@ describe("toNumber", () => {
     expect(toNumber(null)).toBe(0);
     expect(toNumber("not-a-number")).toBe(0);
     expect(toNumber(Number.NEGATIVE_INFINITY)).toBe(0);
+    expect(toNumber("1e1000")).toBe(0);
   });
 });
 
